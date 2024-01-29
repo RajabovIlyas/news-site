@@ -1,7 +1,8 @@
-import type {Metadata} from 'next'
+import type { Metadata } from 'next'
 import './globals.css'
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
+import { ReactNode } from 'react'
 
 
 export const metadata: Metadata = {
@@ -9,18 +10,17 @@ export const metadata: Metadata = {
     description: '',
 }
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode
+export default function RootLayout({ children }: {
+    children: ReactNode
 }) {
+
     return (
-        <html lang="en">
+        <html lang='en'>
         <body>
-        <div className="min-h-screen">
-            <Header/>
+        <div className='min-h-screen'>
+            <Header />
             {children}
-            <Footer/>
+            <Footer />
         </div>
         </body>
         </html>
