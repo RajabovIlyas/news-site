@@ -5,7 +5,7 @@ import { useState } from 'react'
 const menuItems = [
     {
         title: 'Everything',
-        path: '/',
+        path: '/everything',
     },
     { title: 'Top headlines', path: '/' },
     { title: 'Sources', path: '/' },
@@ -20,7 +20,7 @@ const Header = () => {
             <header>
                 <div className='lg:flex lg:flex-row flex-col justify-between items-center p-5'>
                     <div className='flex lg:block justify-between items-center'>
-                        <Link href='' className='flex gap-1 justify-center items-center hover:text-gray-900'>
+                        <Link href='/' className='flex gap-1 justify-center items-center hover:text-gray-900'>
                             <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5}
                                  stroke='currentColor' className='w-6 h-6'>
                                 <path strokeLinecap='round' strokeLinejoin='round'
