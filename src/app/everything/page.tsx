@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import { dateFormat } from '@/helper/dateFormat.helper'
 import SearchInput from '@/components/SearchInput/SearchInput'
-import { useSearchParams } from 'next/navigation'
 import { getEverything } from '@/requests/everything.request'
+import { Language } from '@/enums/language.enum'
 
 interface HomeProps{
     searchParams: {
         q?: string;
+        language?: Language
     }
 }
 
