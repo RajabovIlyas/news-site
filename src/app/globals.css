@@ -17,6 +17,6 @@
     }
 
     .search-input {
-        @apply w-full border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 block p-4 ps-10 pr-24 text-sm text-gray-900 text-ellipsis
+        @apply w-full border-2 placeholder:text-gray-800 outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 block py-4 ps-10 pr-24 text-sm text-gray-900 text-ellipsis
     }
 }
