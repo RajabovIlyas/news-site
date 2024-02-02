@@ -1,9 +1,9 @@
-import { Languages } from '@/enums/languages.enum'
 import SearchForm from '@/components/SearchForm/SearchForm'
 import Article from '@/components/Article/Article'
 import { fetcher } from '@/services/fetcher.request'
 import { ArticleReq } from '@/models/article.model'
-import { getEverything } from '@/constants/endpoints.constant'
+import { getTopHeadlines } from '@/constants/endpoints.constant'
+import { Languages } from '@/enums/languages.enum'
 
 interface HomeProps{
     searchParams: {
@@ -15,7 +15,7 @@ interface HomeProps{
 
 export default async function Home({ searchParams }: HomeProps) {
 
-    const { articles } = searchParams.q ? await fetcher<ArticleReq>(getEverything(searchParams)): {articles: []}
+    const { articles } = searchParams.q ? await fetcher<ArticleReq>(getTopHeadlines(searchParams)): {articles: []}
 
 
 
