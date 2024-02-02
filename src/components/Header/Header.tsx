@@ -7,8 +7,8 @@ const menuItems = [
         title: 'Everything',
         path: '/everything',
     },
-    { title: 'Top headlines', path: '/' },
-    { title: 'Sources', path: '/' },
+    { title: 'Top headlines', path: '/top-headlines' },
+    { title: 'Sources', path: '/sources' },
 ]
 
 const Header = () => {

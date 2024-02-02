@@ -1,69 +1,69 @@
-import { Language } from '@/enums/language.enum'
+import { Languages } from '@/enums/languages.enum'
 
 export const languages = [
     {
         label: 'Arabic',
         icon: '',
-        code: Language.ar
+        value: Languages.ar
     },
     {
         label: 'German',
         icon: '',
-        code: Language.de
+        value: Languages.de
     },
     {
         label: 'English',
         icon: '',
-        code: Language.en
+        value: Languages.en
     },
     {
         label: 'Spanish',
         icon: '',
-        code: Language.es
+        value: Languages.es
     },
     {
         label: 'French',
         icon: '',
-        code: Language.fr
+        value: Languages.fr
     },
     {
         label: 'Hebrew',
         icon: '',
-        code: Language.he
+        value: Languages.he
     },
     {
         label: 'Italian',
         icon: '',
-        code: Language.it
+        value: Languages.it
     },
     {
         label: 'Dutch',
         icon: '',
-        code: Language.nl
+        value: Languages.nl
     },
     {
         label: 'Norwegian',
         icon: '',
-        code: Language.no
+        value: Languages.no
     },
     {
         label: 'Portuguese',
         icon: '',
-        code: Language.pt
+        value: Languages.pt
     },
     {
         label: 'Russian',
         icon: '',
-        code: Language.ru
+        value: Languages.ru
     },
     {
         label: 'Swedish',
         icon: '',
-        code: Language.sv
+        value: Languages.sv
     },
     {
         label: 'Chinese',
         icon: '',
-        code: Language.zh
+        value: Languages.zh
     },
 ]
