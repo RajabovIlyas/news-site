@@ -1,7 +1,9 @@
 'use client'
 import SearchForm from '@/components/SearchForm/SearchForm'
+import { FC } from 'react'
+import Notice from '@/components/Notice/Notice'
 
-interface HomeProps {
+interface ErrorProps {
     searchParams: {
         q?: string;
     }
@@ -9,7 +11,7 @@ interface HomeProps {
     reset: () => void
 }
 
-export default function Error({ searchParams, }: HomeProps) {
+const Error:FC<ErrorProps> = ({ searchParams, }) => {
     return (
         <div className='flex-grow max-w-screen-xl mx-auto'>
             <main className='px-5'>
@@ -17,12 +19,7 @@ export default function Error({ searchParams, }: HomeProps) {
                     <SearchForm {...searchParams} />
                 </div>
             </main>
-            <div className='min-h-[calc(100vh-16rem)] flex items-center justify-center'>
-                <div className='text-center'>
-                    <h1 className='text-4xl lg:text-5xl font-bold lg:tracking-tight'>400</h1>
-                    <p className='text-lg mt-4 text-slate-600'>Bad request.</p>
-                </div>
-            </div>
+            <Notice title={400} description={'Bad request.'}/>
         </div>
     )
 }

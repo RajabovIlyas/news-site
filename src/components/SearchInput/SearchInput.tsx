@@ -9,7 +9,7 @@ interface SearchInputProps {
 const SearchInput: FC<SearchInputProps> = (props) => (
 
     <div className='relative w-full'>
-        <div className='absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none'>
+        <div className='absolute top-5 end-3 md:start-0 flex items-center md:ps-3 pointer-events-none'>
             <svg className='w-4 h-4 text-gray-600 stroke-gray-600' aria-hidden='true'
                  xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'>
                 <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2'
@@ -17,11 +17,11 @@ const SearchInput: FC<SearchInputProps> = (props) => (
             </svg>
         </div>
         <input {...props} type='search' id='default-search'
-               className='search-input rounded-r-md'
+               className='search-input pr-8 md:rounded-l-none md:pr-24 md:ps-10'
                placeholder='Enter key words or phrases to search in the title and body of the article.'
                required />
         <button type='submit'
-                className='absolute end-[0.5rem] bottom-[0.5rem] font-medium text-sm
+                className='md:absolute md:end-[0.5rem] md:top-[0.5rem] font-medium text-sm
                             rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent'>Search
         </button>
     </div>
