@@ -13,7 +13,7 @@ interface SearchFormProps {
 const SearchForm:FC<SearchFormProps> = ({q, language}) => {
 
     return(
-        <form className='mt-4 flex w-full'>
+        <form className='mt-4 md:flex w-full'>
             <Select name="language" items={languages} defaultValue={language}/>
             <SearchInput name="q" defaultValue={q}/>
         </form>

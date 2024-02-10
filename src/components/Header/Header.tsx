@@ -48,7 +48,7 @@ const Header = () => {
 
                     </div>
 
-                    <div className='lg:hidden border-b lg:border-b-0 py-2' hidden={!mobileMenuOpen}>
+                    <div className='lg:hidden border-b lg:border-b-0 px-5 py-2 absolute w-auto bg-white left-0 right-0 z-10' hidden={!mobileMenuOpen}>
                         <div className='flex flex-col'>
                             <nav>
                                 <ul className='lg:flex gap-4'>

@@ -9,14 +9,53 @@
     input[type="search"]::-webkit-search-results-decoration {
         @apply hidden
     }
+
+    select{
+        background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+        background-position: calc(100% - 0.75rem) center !important;
+        -moz-appearance:none !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        padding-right: 2rem !important;
+    }
+
 }
 
 @layer components {
-    .img-title {
-        @apply w-96 h-60 object-cover max-w-none  rounded-md object-center bg-white
-    }
 
     .search-input {
-        @apply w-full border-2 placeholder:text-gray-800 outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 block py-4 ps-10 pr-24 text-sm text-gray-900 text-ellipsis
+        @apply w-full border-2 mb-1 rounded-md placeholder:text-gray-800 outline-none border-gray-300 focus:border-gray-600 ring-gray-100 block p-4 text-sm text-gray-900 text-ellipsis
+    }
+
+    .main-title {
+        font-size: clamp(3rem,17vw, 8rem);
+        @apply leading-none font-medium uppercase text-center
+    }
+
+    /*###########################################*/
+
+    .article-title {
+        font-size: clamp(.875rem,5vw, 1.875rem);
+        @apply font-semibold leading-snug tracking-tight text-ellipsis overflow-hidden md:h-20
+    }
+
+    .article-source {
+        @apply text-blue-400 uppercase tracking-wider text-sm font-medium
+    }
+
+    .article-description {
+        @apply text-lg leading-snug tracking-tight mt-1 text-ellipsis overflow-hidden md:h-24
+    }
+
+    .article-img {
+        @apply w-full md:w-96 md:h-60 object-cover max-w-none  rounded-md object-center bg-white
+    }
+
+    .article-image-box {
+        @apply h-[50vw] md:h-60 article-img bg-gray-100 flex justify-center items-center
+    }
+
+    .article-image-box-source {
+        @apply text-4xl text-center text-gray-200 font-semibold leading-snug tracking-tight -rotate-[15deg]
     }
 }

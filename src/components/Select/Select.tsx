@@ -14,7 +14,7 @@ interface SelectProps {
 
 const Select: FC<SelectProps> = ({ items, ...props }) => {
     return (
-        <select {...props} className="search-input p-4 w-40 rounded-l-md h-[56px] border-r-0 focus:border-r-2">
+        <select {...props} className="search-input p-4 md:w-40 md:rounded-r-none h-[56px] md:border-r-0 focus:border-r-2">
             <option className="p-4" value="">Choose Language</option>
             {items.map(({label, value}) => (
                 <option key={value} value={value}>{label}</option>
