@@ -10,7 +10,7 @@ const SearchInput: FC<SearchInputProps> = (props) => (
 
     <div className='relative w-full'>
         <div className='absolute top-5 end-3 md:start-0 flex items-center md:ps-3 pointer-events-none'>
-            <svg className='w-4 h-4 text-gray-600 stroke-gray-600' aria-hidden='true'
+            <svg className='w-4 h-4 text-gray-600 stroke-gray-600 dark:stroke-zinc-500 dark:text-zinc-500' aria-hidden='true'
                  xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'>
                 <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2'
                       d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z' />
@@ -22,7 +22,9 @@ const SearchInput: FC<SearchInputProps> = (props) => (
                required />
         <button type='submit'
                 className='md:absolute md:end-[0.5rem] md:top-[0.5rem] font-medium text-sm
-                            rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent'>Search
+                            rounded text-center transition focus-visible:ring-2 ring-offset-2
+                            ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent
+                            dark:bg-zinc-800 dark:hover:bg-zinc-950'>Search
         </button>
     </div>
 )

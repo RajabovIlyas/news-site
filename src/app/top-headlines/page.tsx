@@ -4,6 +4,7 @@ import { fetcher } from '@/services/fetcher.request'
 import { ArticleReq } from '@/models/article.model'
 import { getTopHeadlines } from '@/constants/endpoints.constant'
 import { Languages } from '@/enums/languages.enum'
+import Notice from '@/components/Notice/Notice'
 
 interface HomeProps{
     searchParams: {
@@ -28,6 +29,9 @@ export default async function Home({ searchParams }: HomeProps) {
                 {articles.map((article) => (
                     <Article key={`${article.title}-${article.description}`} {...article}/>
                 ))}
+                {articles.length === 0 && (
+                    <Notice title={404} description={'Data not found.'}/>
+                )}
             </main>
         </div>
     )
