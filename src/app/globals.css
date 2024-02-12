@@ -19,24 +19,44 @@
         padding-right: 2rem !important;
     }
 
+    body{
+        @apply dark:bg-zinc-800
+    }
+
 }
 
 @layer components {
 
+    .header-link{
+        @apply dark:text-zinc-400 dark:hover:text-zinc-600 text-gray-600 hover:text-gray-900
+    }
+
+    .header-button{
+        @apply dark:border-zinc-400  dark:text-zinc-400  dark:hover:bg-zinc-900 dark:bg-zinc-800 rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-zinc-950 text-white hover:bg-gray-800  border-2 border-transparent
+    }
+
+    .header-link-icon {
+        @apply header-link flex gap-1 justify-center py-2 items-center
+    }
+
     .search-input {
-        @apply w-full border-2 mb-1 rounded-md placeholder:text-gray-800 outline-none border-gray-300 focus:border-gray-600 ring-gray-100 block p-4 text-sm text-gray-900 text-ellipsis
+        @apply w-full border-2 mb-1 rounded-md placeholder:text-gray-800 dark:border-zinc-800 dark:placeholder:text-gray-300 dark:text-gray-200 outline-none border-gray-300 focus:border-gray-600 dark:focus:border-zinc-950 ring-gray-100 dark:bg-zinc-900 block p-4 text-sm text-gray-900 text-ellipsis
     }
 
     .main-title {
         font-size: clamp(3rem,17vw, 8rem);
-        @apply leading-none font-medium uppercase text-center
+        @apply leading-none font-medium uppercase text-center dark:text-zinc-200
+    }
+
+    .main-button {
+       @apply rounded text-center transition dark:border-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-900 focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white border-2 border-black hover:bg-gray-100 text-black  flex gap-1 items-center justify-center
     }
 
     /*###########################################*/
 
     .article-title {
         font-size: clamp(.875rem,5vw, 1.875rem);
-        @apply font-semibold leading-snug tracking-tight text-ellipsis overflow-hidden md:h-20
+        @apply font-semibold leading-snug tracking-tight text-ellipsis overflow-hidden md:h-20 dark:text-gray-200
     }
 
     .article-source {
@@ -44,18 +64,18 @@
     }
 
     .article-description {
-        @apply text-lg leading-snug tracking-tight mt-1 text-ellipsis overflow-hidden md:h-24
+        @apply text-lg leading-snug tracking-tight mt-1 text-ellipsis overflow-hidden md:h-24 dark:text-gray-300
     }
 
     .article-img {
-        @apply w-full md:w-96 md:h-60 object-cover max-w-none  rounded-md object-center bg-white
+        @apply w-full md:w-96 md:h-60 object-cover max-w-none  rounded-md object-center bg-white dark:bg-zinc-900
     }
 
     .article-image-box {
-        @apply h-[50vw] md:h-60 article-img bg-gray-100 flex justify-center items-center
+        @apply h-[50vw] md:h-60 article-img bg-gray-100 flex justify-center items-center dark:bg-gradient-to-r dark:to-neutral-900 dark:from-zinc-900
     }
 
     .article-image-box-source {
-        @apply text-4xl text-center text-gray-200 font-semibold leading-snug tracking-tight -rotate-[15deg]
+        @apply text-4xl text-center text-gray-200 font-semibold leading-snug tracking-tight -rotate-[15deg] dark:text-zinc-800
     }
 }
