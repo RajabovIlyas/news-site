@@ -1,23 +1,22 @@
-'use client'
+'use client';
 
-import { FC } from 'react'
-import Select from '@/components/Select/Select'
-import { languages } from '@/constants/languages.constant'
-import { Languages } from '@/enums/languages.enum'
-import SearchInput from '@/components/SearchInput/SearchInput'
+import { FC } from 'react';
+import Select from '@/components/Select/Select';
+import { languages } from '@/constants/languages.constant';
+import { Languages } from '@/enums/languages.enum';
+import SearchInput from '@/components/SearchInput/SearchInput';
 
 interface SearchFormProps {
-    q?: string,
-    language?: Languages
+  q?: string;
+  language?: Languages;
 }
-const SearchForm:FC<SearchFormProps> = ({q, language}) => {
-
-    return(
-        <form className='mt-4 md:flex w-full'>
-            <Select name="language" items={languages} defaultValue={language}/>
-            <SearchInput name="q" defaultValue={q}/>
-        </form>
-    )
-}
+const SearchForm: FC<SearchFormProps> = ({ q, language }) => {
+  return (
+    <form className='mt-4 w-full md:flex'>
+      <Select name='language' items={languages} defaultValue={language} />
+      <SearchInput name='q' defaultValue={q} />
+    </form>
+  );
+};
 
 export default SearchForm;
