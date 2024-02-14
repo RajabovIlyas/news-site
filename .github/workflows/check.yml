@@ -1,7 +1,7 @@
 name: Check
 on:
   pull_request:
-    branches: [ master, development ]
+    branches: [master, development]
   workflow_dispatch:
 jobs:
   lint:
